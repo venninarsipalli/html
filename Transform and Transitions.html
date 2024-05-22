@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transform and transitions</title>
+<style type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale= 1.0">
+		.div1{
+			height: 150px;
+			width: 150px;
+			background: blueviolet;
+			/*transform: translateX(25px);*/
+			/*transform: translateY(25px);*/
+			/*transform: translate(50px,25px);*/
+			/*transform: rotate(35deg);*/
+			/*transform: scaleX(2);*/
+			/*transform: scaleY(3);*/
+			transform: skew(25deg); 
+		}
+		.div2{
+			height: 150px;
+			width: 150px;
+			background: hotpink;
+		}
+		.div2:hover{
+			transform: rotate(45deg);
+			background:#1ACA9A ;
+			transition-property: transform,background;
+			transition-duration: 4s;
+		}
+		 /*max-width property apply css to the element from 0 to given px'*/
+ 
+ 
+		/*min width apply css to element when the device width >give px;*/
+ 
+		@media screen and (max-width: 720px){
+			.div2{
+			height: 280px;
+			width: 280px;
+			background: green;
+			/*transition-property: background;
+			transition-duration: 2s;*/
+			transform: rotate(25deg);
+			transition: transform,background,width,height 2s;
+ 
+			transition-delay: 2s;
+		}
+</style>
+</head>
+<body style="display: flex;justify-content: center;align-items: center;height: 90vh">
+<!--<div class="div1"></div> -->
+<div class="div2"></div> 
+</body>
+</html>

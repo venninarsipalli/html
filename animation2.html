@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<style type="text/css">
+
+		@keyframes Animation2{
+			0%{
+				transform: scale(2);
+				background:yellow;
+			}
+			30%{
+				transform: rotate(170deg);
+				background: green;
+			}
+			50%{
+				transform: skew(25deg);
+				background: blueviolet;
+			}
+			75%{
+				border-radius: 35px;
+				transform: rotate(165deg);
+			}
+			100%{
+				transform: scale(1);
+				background: hotpink;
+			}
+		}
+		div{
+			height: 150px;
+			width: 150px;
+			background: yellowgreen;
+			animation-name: Animation2;
+			animation-duration: 15s;
+			animation-iteration-count: 1;
+			/*animation-direction:reverse;*/
+			animation-direction: alternate-reverse;
+		}
+	</style>
+</head>
+<body style="display:flex; align-items: center; justify-content:center ;height: 95vh">
+	<div></div>
+</body>
+</html>
